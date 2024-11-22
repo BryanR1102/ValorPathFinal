@@ -1,0 +1,97 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FFF8E1, #E3F2FD); /* Fondo degradado */
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1000px; /* Ancho moderado */
+    background-color: white;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    padding: 30px 40px; /* Espaciado interno */
+    margin: 30px auto;
+  }
+  
+  h2 {
+    font-size: 24px; /* Título más prominente */
+    font-weight: bold;
+    color: #FFC107; /* Dorado */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th {
+    font-size: 18px; /* Tamaño de texto más grande */
+    font-weight: bold;
+    text-align: left;
+    padding: 15px 10px; /* Espaciado entre cabeceras */
+    background-color: #E3F2FD; /* Azul claro */
+    color: #0D47A1; /* Azul profundo */
+    border-bottom: 2px solid #0D47A1; /* Línea separadora */
+  }
+  
+  td {
+    font-size: 16px; /* Texto más grande para celdas */
+    padding: 12px 10px; /* Espaciado interno */
+    color: #424242; /* Gris oscuro */
+    border-bottom: 1px solid #BDBDBD; /* Línea divisora */
+    word-wrap: break-word; /* Ajuste de texto en celdas */
+  }
+  
+  tr:hover {
+    background-color: #F5F5F5; /* Fondo al pasar el cursor */
+    cursor: pointer;
+  }
+  
+  /* Paginador */
+  mat-paginator {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .mat-paginator-range-label,
+  .mat-paginator-page-size-label {
+    color: #0D47A1; /* Azul profundo */
+    font-weight: bold;
+  }
+  
+  .mat-paginator-navigation-button {
+    color: #FFC107; /* Dorado */
+  }
+  
+  /* Sección de recursos menos utilizados */
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #D32F2F; /* Rojo */
+    margin-top: 20px;
+  }
+  
+  ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc; /* Listado con viñetas */
+  }
+  
+  li {
+    font-size: 16px;
+    color: #424242; /* Gris oscuro */
+  }
+  
+  p {
+    font-size: 16px;
+    color: #616161; /* Texto de no disponibles */
+  }
+  

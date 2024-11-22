@@ -1,0 +1,101 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Asegura que ocupe toda la pantalla */
+  background: linear-gradient(180deg, #FFF8E1, #E3F2FD); /* Fondo con degradado */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px; /* Tamaño reducido horizontal */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px 20px; /* Espaciado interno reducido */
+  text-align: center;
+  margin: 10px;
+}
+
+h2 {
+  font-size: 20px; /* Tamaño más compacto */
+  font-weight: bold;
+  color: #FFC107; /* Dorado */
+  margin-bottom: 10px; /* Espaciado reducido */
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 10px; /* Espaciado más compacto */
+}
+
+mat-label {
+  color: #0D47A1; /* Azul profundo */
+  font-weight: bold;
+}
+
+input, textarea {
+  font-size: 13px; /* Fuente ligeramente más pequeña */
+  padding: 8px; /* Reducción de padding interno */
+  background-color: #F5F5F5;
+  border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+  border-color: #FFC107; /* Borde en dorado */
+  box-shadow: 0 0 4px rgba(255, 193, 7, 0.3); /* Reducción de efecto visual */
+}
+
+button {
+  font-size: 13px; /* Fuente más pequeña */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 5px 3px; /* Reducción de márgenes */
+  padding: 8px 15px; /* Botones más compactos */
+  border-radius: 4px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[color="primary"] {
+  background-color: #FFC107; /* Dorado */
+  color: white;
+}
+
+button[color="primary"]:hover {
+  background-color: #FFA000; /* Dorado oscuro */
+}
+
+button[color="warn"] {
+  background-color: #D32F2F; /* Rojo advertencia */
+  color: white;
+}
+
+button[color="warn"]:hover {
+  background-color: #B71C1C; /* Rojo más oscuro */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; /* Espaciado reducido */
+}
+
+mat-checkbox {
+  margin: 10px 0; /* Espaciado más compacto */
+  color: #0D47A1; /* Azul profundo */
+}
+
+mat-error {
+  font-size: 11px; /* Texto de error más pequeño */
+  color: #D32F2F; /* Rojo */
+}
+
+p {
+  font-size: 13px;
+  color: #616161; /* Gris oscuro */
+  margin-top: 10px; /* Espaciado reducido */
+}

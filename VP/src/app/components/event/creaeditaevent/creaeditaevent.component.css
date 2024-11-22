@@ -1,0 +1,104 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ocupa toda la pantalla vertical */
+  background: linear-gradient(180deg, #FFF8E1, #E3F2FD); /* Fondo degradado */
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px; /* Contenedor más amplio para más campos */
+  background-color: white;
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+  padding: 30px 40px; /* Espaciado interno */
+  margin: 20px auto;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 28px; /* Título principal más grande */
+  font-weight: bold;
+  color: #FFC107; /* Dorado */
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px; /* Espaciado entre campos */
+}
+
+mat-label {
+  color: #0D47A1; /* Azul profundo */
+  font-weight: bold;
+}
+
+input, textarea, mat-select {
+  font-size: 14px;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+}
+
+textarea {
+  min-height: 100px; /* Altura estándar para descripciones */
+}
+
+mat-select:hover, mat-select:focus, input:focus, textarea:focus {
+  border-color: #FFC107; /* Borde dorado */
+  box-shadow: 0 0 6px rgba(255, 193, 7, 0.4);
+}
+
+mat-option {
+  font-size: 14px;
+  padding: 12px;
+}
+
+button {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 10px 5px; /* Espaciado entre botones */
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[color="primary"] {
+  background-color: #FFC107; /* Dorado */
+  color: white;
+}
+
+button[color="primary"]:hover {
+  background-color: #FFA000; /* Dorado oscuro */
+}
+
+button[color="warn"] {
+  background-color: #D32F2F; /* Rojo */
+  color: white;
+}
+
+button[color="warn"]:hover {
+  background-color: #B71C1C; /* Rojo oscuro */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Espaciado superior */
+}
+
+mat-error {
+  font-size: 13px;
+  color: #D32F2F; /* Rojo */
+  text-align: left; /* Mensaje alineado */
+}
+
+p {
+  font-size: 14px;
+  color: #616161; /* Gris oscuro */
+}

@@ -1,0 +1,141 @@
+<mat-toolbar *ngIf="verificar()">
+  <!-- Sección izquierda: Logo y navegación -->
+  <div>
+    <button mat-button [routerLink]="['/landing']" style="color: white" class="toolbar-button logo-button">
+      <img src="assets/images/logo.png" alt="Logo" class="logo-image" />
+    </button>
+    <button mat-button style="color: white" [matMenuTriggerFor]="menuReportes" class="toolbar-button">
+      <mat-icon>insert_chart</mat-icon>Reportes
+    </button>
+    <!-- Menús dinámicos basados en roles -->
+    <button mat-button  style="color: white" [matMenuTriggerFor]="menuUser" style="color: white" class="toolbar-button" *ngIf="isAdmin()">
+      <mat-icon>person</mat-icon>Usuarios
+    </button>
+    <button mat-button  style="color: white" [matMenuTriggerFor]="menuRole"  style="color: white" class="toolbar-button" *ngIf="isAdmin()">
+      <mat-icon>assignment</mat-icon>Roles
+    </button>
+    <button mat-button  style="color: white" [matMenuTriggerFor]="menuAppointment" class="toolbar-button">
+      <mat-icon>local_hospital</mat-icon>Citas Médicas
+    </button>
+    <button mat-button  style="color: white" [matMenuTriggerFor]="menuForum" class="toolbar-button" *ngIf="isAdmin() || isPsicologo() || isVeterano()">
+      <mat-icon>forum</mat-icon>Foros
+    </button>
+    <button mat-button  style="color: white" [matMenuTriggerFor]="menuRecu" class="toolbar-button"  *ngIf="isAdmin() || isPsicologo() || isVeterano()">
+      <mat-icon>post_add</mat-icon>Recursos
+    </button>
+
+    <button mat-button  style="color: white" [matMenuTriggerFor]="menuEvent" class="toolbar-button">
+      <mat-icon class="icon-style">event</mat-icon>Eventos
+    </button>
+
+  </div>
+
+  <!-- Sección derecha: Perfil y cerrar sesión -->
+  <div class="toolbar-right">
+    <button mat-button  style="color: white" [matMenuTriggerFor]="menuProfile" class="toolbar-button">
+      <mat-icon class="icon-style">person</mat-icon>Perfil
+    </button>
+    <button mat-button (click)="cerrar()" style="color: white" routerLink="/" class="toolbar-button">
+      <mat-icon class="icon-style">exit_to_app</mat-icon>Cerrar Sesión
+    </button>
+  </div>
+</mat-toolbar>
+
+<!-- Submenús -->
+<mat-menu #menuUser="matMenu">
+  <button mat-menu-item routerLink="/usuarios">
+    <mat-icon>list</mat-icon> Listar
+  </button>
+  <button mat-menu-item routerLink="/usuarios/nuevo">
+    <mat-icon>add</mat-icon> Registrar
+  </button>
+</mat-menu>
+
+<mat-menu #menuRole="matMenu">
+  <button mat-menu-item routerLink="/roles">
+    <mat-icon>list</mat-icon> Listar
+  </button>
+  <button mat-menu-item routerLink="/roles/nuevo">
+    <mat-icon>add</mat-icon> Registrar
+  </button>
+</mat-menu>
+
+<mat-menu #menuAppointment="matMenu">
+  <button mat-menu-item routerLink="/citas">
+    <mat-icon>list</mat-icon> Listar
+  </button>
+  <button mat-menu-item routerLink="/citas/nuevo">
+    <mat-icon>add</mat-icon> Registrar
+  </button>
+</mat-menu>
+
+<mat-menu #menuForum="matMenu">
+  <button mat-menu-item routerLink="/foros">
+    <mat-icon>list</mat-icon> Listar
+  </button>
+  <button mat-menu-item routerLink="/foros/nuevo">
+    <mat-icon>add</mat-icon> Publicar
+  </button>
+</mat-menu>
+<mat-menu #menuEvent="matMenu">
+  <button mat-menu-item routerLink="/eventos" class="menu-item">Listar</button>
+  <button mat-menu-item routerLink="/eventos/nuevo" class="menu-item">Registrar</button>
+</mat-menu>
+<mat-menu #menuRecu="matMenu">
+  <button mat-menu-item routerLink="/recursos" class="menu-item">Listar</button>
+  <button mat-menu-item routerLink="/recursos/nuevo" class="menu-item">Registrar</button>
+  <button mat-menu-item routerLink="/recursosusu" class="menu-item" *ngIf="isAdmin() || isPsicologo()" >Listar usos</button>
+</mat-menu>
+<mat-menu #menuEventType="matMenu">
+  <button mat-menu-item routerLink="/eventostipos" class="menu-item">Listar</button>
+  <button mat-menu-item routerLink="/eventostipos/nuevo" class="menu-item">Registrar</button>
+</mat-menu>
+
+
+<mat-menu #menuPost="matMenu">
+  <button mat-menu-item routerLink="/publicaciones">
+    <mat-icon>list</mat-icon> Listar
+  </button>
+  <button mat-menu-item routerLink="/publicaciones/nuevo">
+    <mat-icon>add</mat-icon> Publicar
+  </button>
+</mat-menu>
+
+<mat-menu #menuReportes="matMenu">
+  <button mat-menu-item routerLink="/reportes/citasporfecha">
+    <mat-icon>space_dashboard</mat-icon> Reporte de Citas por Fecha
+  </button>
+  <button mat-menu-item routerLink="/reportes/reports-post">
+    <mat-icon>bar_chart</mat-icon> Reporte de Cantidad de Publicaciones
+  </button>
+  <button mat-menu-item routerLink="/reportes/citascanceladas">
+    <mat-icon>space_dashboard</mat-icon> Reporte de Citas Canceladas
+  </button>
+  <button mat-menu-item routerLink="/reportes/reports-appointment">
+    <mat-icon>pie_chart</mat-icon> Reporte de Citas por Veteranos
+  </button>
+  <button mat-menu-item routerLink="/reportes/reporteQuantityVeteraninEvent">
+    <mat-icon>table</mat-icon> Reporte de Veteranos por Evento
+  </button>
+  <button mat-menu-item routerLink="/reportes/reporteQuantityEventbyPsichologist">
+    <mat-icon>table</mat-icon> Reporte de Eventos por Psicólogo
+  </button>
+  <button mat-menu-item routerLink="/reportes/quantityforumxpsy">
+    <mat-icon>pie_chart</mat-icon> Reporte de Foros por Psicólogo
+  </button>
+  <button mat-menu-item routerLink="/reportes/mostactiveforum">
+    <mat-icon>bar_chart</mat-icon> Reporte de Foros Más Activos
+  </button>
+    <button mat-menu-item routerLink="/reportes/reports-usorecurso">
+      <mat-icon>bar_chart</mat-icon> Reporte uso recurso por fecha
+    </button>
+</mat-menu>
+
+
+<mat-menu #menuProfile="matMenu">
+  <button mat-menu-item>
+    Rol: <span>{{ role }}</span>
+  </button>
+</mat-menu>
+
+<router-outlet></router-outlet>

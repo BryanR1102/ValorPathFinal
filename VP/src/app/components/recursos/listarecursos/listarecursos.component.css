@@ -1,0 +1,115 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FFF8E1, #E3F2FD); /* Fondo degradado */
+    padding: 20px;
+  }
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Distribución en columnas */
+    gap: 20px; /* Espaciado entre tarjetas */
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo */
+    margin: 20px auto;
+  }
+  
+  .example-card {
+    border-radius: 12px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+  }
+  
+  .example-card:hover {
+    transform: translateY(-5px); /* Efecto hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  }
+  
+  mat-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaciado entre ícono y texto */
+  }
+  
+  mat-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0D47A1; /* Azul profundo */
+  }
+  
+  mat-card-subtitle {
+    font-size: 14px;
+    color: #616161; /* Gris oscuro */
+  }
+  
+  mat-icon {
+    font-size: 28px;
+    color: #FFC107; /* Dorado */
+  }
+  
+  mat-card-content {
+    font-size: 14px;
+    color: #424242; /* Gris oscuro */
+    margin: 10px 0;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: space-between; /* Espaciado entre botones */
+    padding: 10px 0;
+  }
+  
+  button {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    padding: 8px 16px; /* Botón más compacto */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button[color="primary"] {
+    background-color: #FFC107; /* Dorado */
+    color: white;
+  }
+  
+  button[color="primary"]:hover {
+    background-color: #FFA000; /* Dorado oscuro */
+  }
+  
+  button[color="warn"] {
+    background-color: #D32F2F; /* Rojo */
+    color: white;
+  }
+  
+  button[color="warn"]:hover {
+    background-color: #B71C1C; /* Rojo oscuro */
+  }
+  
+  /* Paginador */
+  .paginator {
+    width: 100%;
+    max-width: 1200px; /* Ancho consistente con las tarjetas */
+    margin-top: 20px;
+  }
+  
+  mat-paginator {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  .mat-paginator-range-label,
+  .mat-paginator-page-size-label {
+    color: #0D47A1; /* Azul profundo */
+    font-weight: bold;
+  }
+  
+  .mat-paginator-navigation-button {
+    color: #FFC107; /* Dorado */
+  }
+  

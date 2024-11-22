@@ -1,0 +1,102 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FFF8E1, #E3F2FD); /* Fondo degradado */
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1000px; /* Ancho máximo */
+    background-color: white;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: 30px 40px; /* Espaciado interno */
+    margin: 30px auto;
+  }
+  
+  h1 {
+    font-size: 24px; /* Título prominente */
+    font-weight: bold;
+    color: #FFC107; /* Dorado */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th {
+    font-size: 18px; /* Tamaño de texto más grande */
+    font-weight: bold;
+    text-align: left;
+    padding: 15px 10px; /* Espaciado entre cabeceras */
+    background-color: #E3F2FD; /* Azul claro */
+    color: #0D47A1; /* Azul profundo */
+    border-bottom: 2px solid #0D47A1; /* Línea divisoria */
+  }
+  
+  td {
+    font-size: 16px; /* Texto más grande */
+    padding: 12px 10px; /* Espaciado interno */
+    color: #424242; /* Gris oscuro */
+    border-bottom: 1px solid #BDBDBD; /* Línea divisoria */
+  }
+  
+  tr:hover {
+    background-color: #F5F5F5; /* Fondo al pasar el cursor */
+    cursor: pointer;
+  }
+  
+  /* Botones */
+  button {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    padding: 12px 20px; /* Espaciado en los botones */
+    margin-bottom: 15px;
+    background-color: #FFC107; /* Dorado */
+    color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #FFA000; /* Dorado más oscuro */
+  }
+  
+  /* Íconos */
+  mat-icon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  mat-icon:hover {
+    transform: scale(1.2); /* Ampliación en hover */
+  }
+  
+  /* Ícono de eliminar */
+  mat-icon[color="delete"] {
+    color: #D32F2F; /* Rojo */
+  }
+  
+  mat-icon[color="delete"]:hover {
+    color: #B71C1C; /* Rojo oscuro */
+  }
+  
+  /* Ícono de editar */
+  mat-icon[color="edit"] {
+    color: #388E3C; /* Verde */
+  }
+  
+  mat-icon[color="edit"]:hover {
+    color: #2E7D32; /* Verde oscuro */
+  }
+  

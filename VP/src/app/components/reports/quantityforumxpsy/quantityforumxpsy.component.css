@@ -1,0 +1,43 @@
+:host {
+    display: block;
+    padding: 20px;
+    background: linear-gradient(180deg, #e3f2fd, #fff8e1); /* Fondo degradado */
+    min-height: 100vh;
+  }
+  
+  h1 {
+    font-size: 28px; /* Título prominente */
+    font-weight: bold;
+    color: #0D47A1; /* Azul profundo */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .chart-container {
+    max-width: 900px; /* Tamaño máximo del contenedor */
+    width: 100%;
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 25px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    text-align: center;
+  }
+  
+  canvas {
+    width: 100% !important; /* Uso del 100% del contenedor */
+    height: auto !important; /* Mantiene relación de aspecto */
+    margin-top: 10px;
+  }
+  
+  /* Estilo para gráficos responsivos */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 24px; /* Ajuste del título en pantallas pequeñas */
+    }
+  
+    .chart-container {
+      padding: 15px;
+    }
+  }
+  

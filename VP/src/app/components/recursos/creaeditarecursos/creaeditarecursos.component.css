@@ -1,0 +1,157 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFF8E1, #E3F2FD);
+  margin: 0;
+  padding: 20px;
+}
+
+/* Estilos para la sección de sugerencias */
+.magicloops-container {
+  width: 100%;
+  max-width: 900px; /* Ancho amplio para múltiples tarjetas */
+  margin: 20px auto;
+  text-align: center;
+}
+
+.magicloops-container h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFC107; /* Dorado */
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Diseño adaptable */
+  gap: 20px; /* Espaciado entre tarjetas */
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+mat-card {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+mat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+mat-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0D47A1; /* Azul profundo */
+}
+
+mat-card-subtitle {
+  font-size: 14px;
+  color: #616161; /* Gris oscuro */
+}
+
+mat-card-content p {
+  font-size: 14px;
+  color: #424242;
+  text-align: justify;
+}
+
+.error {
+  color: #D32F2F; /* Rojo para mensajes de error */
+  font-weight: bold;
+}
+
+/* Estilos para el registro de recursos */
+.container {
+  width: 100%;
+  max-width: 600px; /* Ajuste estándar */
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  padding: 30px 40px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFC107;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+mat-label {
+  color: #0D47A1;
+  font-weight: bold;
+}
+
+input, textarea, mat-select {
+  font-size: 14px;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+mat-select:hover, mat-select:focus, input:focus, textarea:focus {
+  border-color: #FFC107;
+  box-shadow: 0 0 6px rgba(255, 193, 7, 0.4);
+}
+
+mat-option {
+  font-size: 14px;
+}
+
+button {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 10px 5px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[color="primary"] {
+  background-color: #FFC107;
+  color: white;
+}
+
+button[color="primary"]:hover {
+  background-color: #FFA000;
+}
+
+button[color="warn"] {
+  background-color: #D32F2F;
+  color: white;
+}
+
+button[color="warn"]:hover {
+  background-color: #B71C1C;
+}
+
+mat-error {
+  font-size: 13px;
+  color: #D32F2F;
+}
+
+p {
+  font-size: 14px;
+  color: #616161;
+}

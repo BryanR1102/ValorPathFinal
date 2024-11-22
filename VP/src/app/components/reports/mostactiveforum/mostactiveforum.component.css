@@ -1,0 +1,42 @@
+:host {
+    display: block;
+    padding: 20px;
+    background: linear-gradient(180deg, #f4f4f9, #e3f2fd); /* Fondo degradado */
+    min-height: 100vh;
+  }
+  
+  h1 {
+    font-size: 28px; /* Título prominente */
+    font-weight: bold;
+    color: #0D47A1; /* Azul profundo */
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .chart-container {
+    max-width: 800px; /* Tamaño máximo para el gráfico */
+    width: 100%;
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco para destacar el gráfico */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+  }
+  
+  canvas {
+    width: 100% !important; /* Ajuste para usar todo el ancho disponible */
+    height: auto !important; /* Mantiene la relación de aspecto del gráfico */
+  }
+  
+  /* Estilo para gráficos responsivos */
+  @media (max-width: 768px) {
+    .chart-container {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 24px; /* Ajusta el título en pantallas pequeñas */
+    }
+  }
+  

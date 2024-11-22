@@ -1,0 +1,64 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(180deg, #E3F2FD, #FFF8E1); /* Fondo degradado */
+    min-height: 100vh;
+  }
+  
+  table {
+    width: 100%;
+    max-width: 800px; /* Limita el tamaño máximo de la tabla */
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white; /* Fondo blanco */
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    overflow: hidden; /* Oculta bordes redondeados */
+  }
+  
+  th {
+    font-size: 18px; /* Tamaño de texto para encabezados */
+    font-weight: bold;
+    text-align: left;
+    padding: 12px 15px; /* Espaciado interno */
+    background-color: #E3F2FD; /* Azul claro */
+    color: #0D47A1; /* Azul profundo */
+    border-bottom: 2px solid #0D47A1; /* Línea divisoria */
+  }
+  
+  td {
+    font-size: 16px;
+    padding: 10px 15px; /* Espaciado interno */
+    color: #424242; /* Gris oscuro */
+    border-bottom: 1px solid #BDBDBD; /* Línea divisoria */
+    word-wrap: break-word; /* Ajuste de texto */
+  }
+  
+  tr:nth-child(even) {
+    background-color: #F5F5F5; /* Fondo alternativo para filas pares */
+  }
+  
+  tr:hover {
+    background-color: #FFC107; /* Fondo amarillo al pasar el cursor */
+    color: #FFFFFF; /* Texto blanco */
+    cursor: pointer;
+  }
+  
+  .mat-elevation-z8 {
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura bordes limpios */
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    table {
+      font-size: 14px; /* Reduce tamaño de fuente */
+    }
+  
+    th, td {
+      padding: 8px 10px; /* Ajusta espaciado */
+    }
+  }
+  

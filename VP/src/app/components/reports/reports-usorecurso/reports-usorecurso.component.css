@@ -1,0 +1,105 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(180deg, #E3F2FD, #FFF8E1); /* Fondo degradado */
+    min-height: 100vh;
+  }
+  
+  .form-container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px; /* Espaciado inferior */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Separación entre los campos */
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0D47A1; /* Azul profundo */
+    margin-bottom: 5px; /* Separación del campo */
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #BDBDBD;
+    border-radius: 8px;
+    background-color: #F9F9F9; /* Fondo gris claro */
+    transition: border-color 0.3s;
+  }
+  
+  input:focus {
+    border-color: #FFC107; /* Amarillo en foco */
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 193, 7, 0.5); /* Efecto de foco */
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #FFC107; /* Amarillo */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #FFA000; /* Amarillo oscuro */
+    transform: scale(1.02); /* Efecto de hover */
+  }
+  
+  .chart-container {
+    max-width: 900px; /* Tamaño máximo */
+    width: 100%;
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 25px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+  }
+  
+  canvas {
+    width: 100% !important; /* Ancho completo */
+    height: auto !important; /* Mantener proporción */
+  }
+  
+  p {
+    font-size: 14px;
+    color: #424242; /* Gris oscuro */
+    text-align: center;
+    margin-top: 20px; /* Separación del gráfico */
+  }
+  
+  /* Estilo responsivo */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 15px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  
+    .chart-container {
+      padding: 20px;
+    }
+  }
+  

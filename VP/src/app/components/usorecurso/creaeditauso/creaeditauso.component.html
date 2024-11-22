@@ -1,0 +1,45 @@
+<div class="container">
+    <h2>Registro de recursos</h2>
+    <form [formGroup]="form" (submit)="aceptar()">
+        <mat-form-field class="example-full-width" *ngIf="edicion">
+            <mat-label>Código</mat-label>
+            <input matInput placeholder="id" formControlName="id" readonly />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Usuarios</mat-label>
+            <mat-select formControlName="usuario">
+                <mat-option *ngFor="let user of listaUsuarios" [value]="user">
+                    {{ user.username }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>  
+        <mat-form-field class="example-full-width">
+            <mat-label>Recurso</mat-label>
+            <mat-select formControlName="recurso">
+                <mat-option *ngFor="let rec of listaRecursos" [value]="rec">
+                    {{ rec.autor }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Fecha</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="fecha" placeholder="MM/DD/YYYY" />
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="form.get('fecha')?.hasError('required')">
+                La fecha es obligatoria.
+            </mat-error>
+        </mat-form-field>
+
+        <div>
+            <button mat-raised-button color="primary" type="submit">Aceptar</button>
+            <button mat-raised-button color="warn" routerLink="/recursosusu" type="button" class="cancel">
+                Cancelar
+            </button>
+        </div>
+
+        <p>{{ mensaje }}</p>
+    </form>
+</div>

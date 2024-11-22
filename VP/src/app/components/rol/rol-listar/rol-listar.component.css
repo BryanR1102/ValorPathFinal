@@ -1,0 +1,115 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FFF8E1, #E3F2FD); /* Fondo degradado */
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 800px; /* Ajustado al contenido */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: 40px 50px; /* Espaciado interno */
+    margin: 30px auto;
+  }
+  
+  h2 {
+    font-size: 26px; /* Título más grande */
+    font-weight: bold;
+    color: #FFC107; /* Dorado */
+    margin-bottom: 30px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+  }
+  
+  th {
+    font-size: 18px; /* Texto más grande */
+    font-weight: bold;
+    text-align: left;
+    padding: 15px 10px; /* Más espacio en cabecera */
+    background-color: #E3F2FD; /* Azul claro */
+    color: #0D47A1; /* Azul profundo */
+    border-bottom: 2px solid #0D47A1; /* Línea de separación */
+  }
+  
+  td {
+    font-size: 16px; /* Texto más grande en celdas */
+    padding: 15px 10px; /* Más espacio en filas */
+    color: #424242; /* Gris oscuro */
+    border-bottom: 1px solid #BDBDBD; /* Línea inferior */
+  }
+  
+  tr:hover {
+    background-color: #F5F5F5; /* Efecto de hover en filas */
+    cursor: pointer;
+  }
+  
+  /* Botón "Nuevo" */
+  button {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 5px 0;
+    padding: 12px 20px; /* Botón más grande */
+    border-radius: 6px;
+    background-color: #FFC107; /* Dorado */
+    color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #FFA000; /* Dorado más oscuro */
+  }
+  
+  /* Íconos de eliminar y actualizar */
+  mat-icon {
+    cursor: pointer;
+    font-size: 28px; /* Íconos más grandes */
+    transition: transform 0.2s ease;
+  }
+  
+  /* Ícono de Eliminar */
+  mat-icon[color="delete"] {
+    color: #D32F2F; /* Rojo para eliminar */
+  }
+  
+  mat-icon[color="delete"]:hover {
+    transform: scale(1.3); /* Hover más grande */
+    color: #B71C1C; /* Rojo oscuro al hacer hover */
+  }
+  
+  /* Ícono de Actualizar */
+  mat-icon[color="edit"] {
+    color: #388E3C; /* Verde para actualizar */
+  }
+  
+  mat-icon[color="edit"]:hover {
+    transform: scale(1.3);
+    color: #2E7D32; /* Verde oscuro al hacer hover */
+  }
+  
+  /* Paginador */
+  mat-paginator {
+    margin-top: 30px;
+  }
+  
+  .mat-paginator-range-label,
+  .mat-paginator-page-size-label {
+    color: #0D47A1; /* Azul profundo */
+    font-weight: bold;
+  }
+  
+  .mat-paginator-navigation-button {
+    color: #FFC107; /* Dorado */
+  }
+  

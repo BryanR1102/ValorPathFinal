@@ -1,0 +1,78 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+mat-toolbar {
+  background: linear-gradient(90deg, #FFC107, #FF8F00); /* Degradado dorado */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Asegura que todo esté alineado verticalmente */
+  padding: 0 16px;
+  height: 64px; /* Altura fija para evitar problemas de alineación */
+}
+
+mat-toolbar div {
+  display: flex;
+  align-items: center; /* Alinea los elementos dentro de cada contenedor */
+}
+
+.toolbar-button {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.toolbar-button:hover {
+  color: #BBDEFB; /* Azul claro */
+  transform: translateY(-2px);
+}
+
+.logo-button {
+  padding: 0;
+  margin-right: 20px;
+}
+
+.logo-image {
+  width: 40px;
+  height: auto;
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.icon-style {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  mat-toolbar {
+    flex-wrap: wrap; /* Permite que los botones se ajusten en pantallas pequeñas */
+    height: auto;
+  }
+
+  .toolbar-right {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .toolbar-button {
+    margin-right: 5px;
+  }
+
+  .logo-image {
+    width: 30px;
+  }
+}

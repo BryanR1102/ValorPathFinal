@@ -1,0 +1,62 @@
+:host {
+    display: block;
+    padding: 20px;
+    background: linear-gradient(180deg, #E3F2FD, #FFF8E1); /* Fondo degradado */
+    min-height: 100vh;
+  }
+  
+  table {
+    width: 100%;
+    max-width: 900px; /* Limita el tamaño máximo de la tabla */
+    margin: 20px auto; /* Centrado horizontal */
+    border-collapse: collapse;
+    background-color: white; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    overflow: hidden;
+  }
+  
+  th {
+    font-size: 18px; /* Tamaño del texto de los encabezados */
+    font-weight: bold;
+    text-align: left;
+    padding: 12px 15px; /* Espaciado interno */
+    background-color: #E3F2FD; /* Azul claro */
+    color: #0D47A1; /* Azul profundo */
+    border-bottom: 3px solid #0D47A1; /* Línea divisoria */
+  }
+  
+  td {
+    font-size: 16px;
+    padding: 10px 15px; /* Espaciado interno */
+    color: #424242; /* Gris oscuro */
+    border-bottom: 1px solid #BDBDBD; /* Línea divisoria */
+    word-wrap: break-word; /* Ajuste de texto */
+  }
+  
+  tr:nth-child(even) {
+    background-color: #FFF8E1; /* Fondo alternativo amarillo claro */
+  }
+  
+  tr:hover {
+    background-color: #FFC107; /* Fondo amarillo al pasar el cursor */
+    color: white; /* Texto blanco al pasar el cursor */
+    cursor: pointer;
+  }
+  
+  .mat-elevation-z8 {
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Bordes limpios */
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    table {
+      font-size: 14px; /* Fuente más pequeña para pantallas pequeñas */
+    }
+  
+    th, td {
+      padding: 8px 10px; /* Ajusta el espaciado interno */
+    }
+  }
+  
